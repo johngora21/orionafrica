@@ -34,7 +34,7 @@ export default function Navbar() {
             <div className="bg-green-600 p-2 rounded-lg">
               <Leaf className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-green-800">Neo Farms</span>
+            <span className="text-2xl font-bold text-green-800">EcoFarms</span>
           </button>
 
           {/* Desktop Navigation */}

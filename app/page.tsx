@@ -118,13 +118,13 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Redesigned */}
+      {/* Hero Section - Mobile Responsive */}
       <section id="home" className="relative min-h-screen overflow-hidden bg-gray-900">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          {/* Floating geometric shapes */}
+          {/* Floating geometric shapes - Responsive sizes */}
           <motion.div
-            className="absolute top-20 left-10 w-20 h-20 bg-green-500 rounded-full opacity-20"
+            className="absolute top-20 left-4 md:left-10 w-12 h-12 md:w-20 md:h-20 bg-green-500 rounded-full opacity-20"
             animate={{
               y: [0, -20, 0],
               x: [0, 10, 0],
@@ -136,7 +136,7 @@ export default function HomePage() {
             }}
           />
           <motion.div
-            className="absolute top-40 right-20 w-16 h-16 bg-blue-500 rounded-lg opacity-20"
+            className="absolute top-32 md:top-40 right-8 md:right-20 w-10 h-10 md:w-16 md:h-16 bg-blue-500 rounded-lg opacity-20"
             animate={{
               rotate: [0, 180, 360],
               y: [0, -30, 0],
@@ -148,7 +148,7 @@ export default function HomePage() {
             }}
           />
           <motion.div
-            className="absolute bottom-40 left-1/4 w-12 h-12 bg-purple-500 rounded-full opacity-20"
+            className="absolute bottom-32 md:bottom-40 left-1/4 w-8 h-8 md:w-12 md:h-12 bg-purple-500 rounded-full opacity-20"
             animate={{
               scale: [1, 1.2, 1],
               y: [0, -15, 0],
@@ -160,7 +160,7 @@ export default function HomePage() {
             }}
           />
           <motion.div
-            className="absolute top-1/3 right-1/3 w-8 h-8 bg-orange-500 rounded-lg opacity-20"
+            className="absolute top-1/3 right-1/3 w-6 h-6 md:w-8 md:h-8 bg-orange-500 rounded-lg opacity-20"
             animate={{
               rotate: [0, -180, 0],
               x: [0, 20, 0],
@@ -175,29 +175,29 @@ export default function HomePage() {
 
         {/* Main Hero Content */}
         <div className="relative z-20 container mx-auto px-4 h-screen flex items-center">
-          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="space-y-8"
+              className="space-y-6 md:space-y-8 text-center lg:text-left"
             >
               {/* Badge */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 text-green-400"
+                className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-3 md:px-4 py-2 text-green-400"
               >
-                <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-medium">Trusted Since 2021</span>
+                <Sparkles className="w-3 h-3 md:w-4 md:h-4" />
+                <span className="text-xs md:text-sm font-medium">Trusted Since 2021</span>
               </motion.div>
 
               {/* Main Heading */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <motion.h1
-                  className="text-5xl md:text-7xl font-bold leading-tight"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
@@ -210,19 +210,19 @@ export default function HomePage() {
                 </motion.h1>
 
                 <motion.div
-                  className="flex items-center gap-4 text-blue-400"
+                  className="flex items-center justify-center lg:justify-start gap-3 md:gap-4 text-blue-400"
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                 >
-                  <div className="w-12 h-0.5 bg-blue-400"></div>
-                  <span className="text-lg font-medium">For Global Markets</span>
+                  <div className="w-8 md:w-12 h-0.5 bg-blue-400"></div>
+                  <span className="text-sm md:text-lg font-medium">For Global Markets</span>
                 </motion.div>
               </div>
 
               {/* Description */}
               <motion.p
-                className="text-xl text-gray-300 leading-relaxed max-w-lg"
+                className="text-base md:text-xl text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
@@ -233,67 +233,67 @@ export default function HomePage() {
 
               {/* Stats Row */}
               <motion.div
-                className="flex items-center gap-8"
+                className="flex items-center justify-center lg:justify-start gap-4 md:gap-8"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">25+</div>
-                  <div className="text-sm text-gray-400">Countries</div>
+                  <div className="text-lg md:text-2xl font-bold text-white">25+</div>
+                  <div className="text-xs md:text-sm text-gray-400">Countries</div>
                 </div>
-                <div className="w-px h-12 bg-gray-600"></div>
+                <div className="w-px h-8 md:h-12 bg-gray-600"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">100+</div>
-                  <div className="text-sm text-gray-400">Partners</div>
+                  <div className="text-lg md:text-2xl font-bold text-white">100+</div>
+                  <div className="text-xs md:text-sm text-gray-400">Partners</div>
                 </div>
-                <div className="w-px h-12 bg-gray-600"></div>
+                <div className="w-px h-8 md:h-12 bg-gray-600"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">15+</div>
-                  <div className="text-sm text-gray-400">Crops</div>
+                  <div className="text-lg md:text-2xl font-bold text-white">15+</div>
+                  <div className="text-xs md:text-sm text-gray-400">Crops</div>
                 </div>
               </motion.div>
 
               {/* Action Buttons */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.4 }}
               >
                 <Button
                   size="lg"
-                  className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-green-500 hover:bg-green-600 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
                   <a href="#products" className="flex items-center gap-2">
                     Explore Products
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white/20 text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300 group"
+                  className="border-2 border-white/20 text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300 group"
                 >
-                  <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                  <Play className="w-4 h-4 md:w-5 md:h-5 mr-2 group-hover:scale-110 transition-transform" />
                   <a href="#about">Watch Story</a>
                 </Button>
               </motion.div>
 
               {/* Trust Indicators */}
               <motion.div
-                className="flex items-center gap-6 pt-4"
+                className="flex items-center justify-center lg:justify-start gap-4 md:gap-6 pt-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.6 }}
               >
                 <div className="flex items-center gap-2 text-gray-400">
-                  <Shield className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">ISO Certified</span>
+                  <Shield className="w-4 h-4 md:w-5 md:h-5 text-green-400" />
+                  <span className="text-xs md:text-sm">ISO Certified</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-400">
-                  <TrendingUp className="w-5 h-5 text-blue-400" />
-                  <span className="text-sm">Export Leader</span>
+                  <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
+                  <span className="text-xs md:text-sm">Export Leader</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -303,7 +303,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="relative"
+              className="relative mt-8 lg:mt-0"
             >
               {/* Main Product Display */}
               <div className="relative">
@@ -315,11 +315,11 @@ export default function HomePage() {
                   className="relative"
                 >
                   {/* Product Card */}
-                  <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-3xl"></div>
+                  <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl md:rounded-3xl p-4 md:p-8 border border-white/20 shadow-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl md:rounded-3xl"></div>
 
                     {/* Product Image */}
-                    <div className="relative h-80 rounded-2xl overflow-hidden mb-6">
+                    <div className="relative h-48 md:h-80 rounded-xl md:rounded-2xl overflow-hidden mb-4 md:mb-6">
                       <Image
                         src={heroSlides[currentSlide].image || "/placeholder.svg"}
                         alt={heroSlides[currentSlide].title}
@@ -329,9 +329,9 @@ export default function HomePage() {
                       <div className="absolute inset-0 bg-black/20"></div>
 
                       {/* Floating Badge */}
-                      <div className="absolute top-4 right-4">
+                      <div className="absolute top-2 md:top-4 right-2 md:right-4">
                         <div
-                          className="px-3 py-1 rounded-full text-white text-sm font-medium"
+                          className="px-2 md:px-3 py-1 rounded-full text-white text-xs md:text-sm font-medium"
                           style={{ backgroundColor: heroSlides[currentSlide].color }}
                         >
                           Premium Grade
@@ -340,26 +340,28 @@ export default function HomePage() {
                     </div>
 
                     {/* Product Info */}
-                    <div className="space-y-4">
+                    <div className="space-y-3 md:space-y-4">
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">{heroSlides[currentSlide].title}</h3>
-                        <p className="text-gray-300">{heroSlides[currentSlide].subtitle}</p>
+                        <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">
+                          {heroSlides[currentSlide].title}
+                        </h3>
+                        <p className="text-sm md:text-base text-gray-300">{heroSlides[currentSlide].subtitle}</p>
                       </div>
 
                       {/* Rating */}
                       <div className="flex items-center gap-2">
                         <div className="flex items-center">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                            <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-yellow-400 text-yellow-400" />
                           ))}
                         </div>
-                        <span className="text-gray-300 text-sm">Export Quality</span>
+                        <span className="text-gray-300 text-xs md:text-sm">Export Quality</span>
                       </div>
 
                       {/* Quick Action */}
                       <Button
                         size="sm"
-                        className="w-full text-white border-0"
+                        className="w-full text-white border-0 text-sm md:text-base"
                         style={{ backgroundColor: heroSlides[currentSlide].color }}
                       >
                         <a href="#contact">Request Sample</a>
@@ -369,21 +371,21 @@ export default function HomePage() {
                 </motion.div>
 
                 {/* Slide Indicators */}
-                <div className="flex justify-center gap-2 mt-6">
+                <div className="flex justify-center gap-2 mt-4 md:mt-6">
                   {heroSlides.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                         index === currentSlide ? "bg-green-400 scale-125" : "bg-white/30"
                       }`}
                     />
                   ))}
                 </div>
 
-                {/* Floating Elements */}
+                {/* Floating Elements - Hidden on mobile for performance */}
                 <motion.div
-                  className="absolute -top-4 -right-4 w-20 h-20 bg-green-500/20 rounded-full blur-xl"
+                  className="absolute -top-4 -right-4 w-16 h-16 md:w-20 md:h-20 bg-green-500/20 rounded-full blur-xl hidden md:block"
                   animate={{
                     scale: [1, 1.2, 1],
                     opacity: [0.3, 0.6, 0.3],
@@ -395,7 +397,7 @@ export default function HomePage() {
                   }}
                 />
                 <motion.div
-                  className="absolute -bottom-6 -left-6 w-16 h-16 bg-blue-500/20 rounded-full blur-xl"
+                  className="absolute -bottom-6 -left-6 w-12 h-12 md:w-16 md:h-16 bg-blue-500/20 rounded-full blur-xl hidden md:block"
                   animate={{
                     scale: [1.2, 1, 1.2],
                     opacity: [0.4, 0.7, 0.4],
@@ -413,15 +415,15 @@ export default function HomePage() {
 
         {/* Bottom Scroll Indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+          className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
         >
-          <div className="flex flex-col items-center gap-2 text-white/60">
-            <span className="text-sm">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="flex flex-col items-center gap-1 md:gap-2 text-white/60">
+            <span className="text-xs md:text-sm">Scroll to explore</span>
+            <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/30 rounded-full flex justify-center">
               <motion.div
-                className="w-1 h-3 bg-white/60 rounded-full mt-2"
+                className="w-1 h-2 md:h-3 bg-white/60 rounded-full mt-1 md:mt-2"
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
               />
@@ -431,10 +433,10 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-100">
+      <section className="py-12 md:py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -448,13 +450,13 @@ export default function HomePage() {
             ].map((stat, index) => (
               <motion.div key={index} variants={fadeInUp} className="text-center">
                 <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4"
                   style={{ backgroundColor: stat.color }}
                 >
-                  <stat.icon className="w-8 h-8 text-white" />
+                  <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-gray-800 mb-2">{stat.number}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-1 md:mb-2">{stat.number}</div>
+                <div className="text-sm md:text-base text-gray-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -462,32 +464,32 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">About Neo Farms</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6">About EcoFarms</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Pioneering agricultural excellence in Tanzania since 2021, connecting local farmers with global markets
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-20">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-3xl font-bold text-green-800 mb-6">Our Story</h3>
-              <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+              <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-4 md:mb-6">Our Story</h3>
+              <div className="space-y-4 md:space-y-6 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  Founded in 2021 in Dar es Salaam, Neo Farms emerged from a vision to bridge Tanzania's rich
+                  Founded in 2021 in Dar es Salaam, EcoFarms emerged from a vision to bridge Tanzania's rich
                   agricultural heritage with growing global demand for premium, sustainably-sourced crops.
                 </p>
                 <p>
@@ -509,17 +511,17 @@ export default function HomePage() {
             >
               <Image
                 src="/placeholder.svg?height=500&width=600"
-                alt="Neo Farms facility"
+                alt="EcoFarms facility"
                 width={600}
                 height={500}
-                className="rounded-2xl shadow-2xl"
+                className="rounded-xl md:rounded-2xl shadow-2xl w-full h-auto"
               />
             </motion.div>
           </div>
 
           {/* Mission, Vision, Values */}
           <motion.div
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-6 md:gap-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -549,15 +551,15 @@ export default function HomePage() {
               },
             ].map((item, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="text-center p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
+                <Card className="text-center p-6 md:p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
                   <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6"
                     style={{ backgroundColor: item.color }}
                   >
-                    <item.icon className="w-8 h-8 text-white" />
+                    <item.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
-                  <h4 className="text-2xl font-bold text-gray-800 mb-4">{item.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">{item.title}</h4>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{item.description}</p>
                 </Card>
               </motion.div>
             ))}
@@ -566,17 +568,19 @@ export default function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 bg-gray-100">
+      <section id="products" className="py-12 md:py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">Premium Export Crops</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6">
+              Premium Export Crops
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Discover Tanzania's finest agricultural products, carefully selected and processed to meet international
               quality standards
             </p>
@@ -584,26 +588,26 @@ export default function HomePage() {
 
           {/* Horizontal Scrolling Container with Navigation Buttons */}
           <div className="relative">
-            <div className="flex justify-between absolute top-1/2 -translate-y-1/2 w-full z-10 px-4">
+            <div className="flex justify-between absolute top-1/2 -translate-y-1/2 w-full z-10 px-2 md:px-4">
               <button
                 onClick={scrollLeft}
-                className="bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
+                className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
                 aria-label="Scroll left"
               >
-                <ChevronLeft className="w-6 h-6 text-gray-800" />
+                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
               </button>
               <button
                 onClick={scrollRight}
-                className="bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
+                className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
                 aria-label="Scroll right"
               >
-                <ChevronRight className="w-6 h-6 text-gray-800" />
+                <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
               </button>
             </div>
 
             <div
               ref={scrollContainerRef}
-              className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide px-4"
+              className="flex gap-4 md:gap-6 overflow-x-auto pb-4 md:pb-6 scrollbar-hide px-2 md:px-4"
               style={{
                 scrollbarWidth: "none",
                 msOverflowStyle: "none",
@@ -745,43 +749,49 @@ export default function HomePage() {
               ].map((product, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-80"
+                  className="flex-shrink-0 w-72 md:w-80"
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg h-full">
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-40 md:h-48 overflow-hidden">
                       <Image
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
                         className="object-cover transition-transform duration-300 hover:scale-110"
                       />
-                      <div className="absolute top-4 left-4">
-                        <Badge className="text-white border-0" style={{ backgroundColor: product.color }}>
+                      <div className="absolute top-3 md:top-4 left-3 md:left-4">
+                        <Badge
+                          className="text-white border-0 text-xs md:text-sm"
+                          style={{ backgroundColor: product.color }}
+                        >
                           {product.category}
                         </Badge>
                       </div>
-                      <div className="absolute top-4 right-4">
-                        <Badge variant="secondary" className="bg-white/90 text-gray-800 font-semibold">
+                      <div className="absolute top-3 md:top-4 right-3 md:right-4">
+                        <Badge
+                          variant="secondary"
+                          className="bg-white/90 text-gray-800 font-semibold text-xs md:text-sm"
+                        >
                           {product.exportGrade}
                         </Badge>
                       </div>
                     </div>
-                    <CardContent className="p-6 flex flex-col h-full">
+                    <CardContent className="p-4 md:p-6 flex flex-col h-full">
                       <div className="flex-grow">
-                        <div className="flex items-center justify-between mb-3">
-                          <h3 className="text-xl font-bold text-gray-800">{product.name}</h3>
+                        <div className="flex items-center justify-between mb-2 md:mb-3">
+                          <h3 className="text-lg md:text-xl font-bold text-gray-800">{product.name}</h3>
                           <div className="flex items-center">
                             {[...Array(product.rating)].map((_, i) => (
-                              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                              <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
                         </div>
-                        <p className="text-gray-600 leading-relaxed mb-4 text-sm">{product.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
+                        <p className="text-gray-600 leading-relaxed mb-3 md:mb-4 text-sm">{product.description}</p>
+                        <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                           {product.features.map((feature, idx) => (
                             <Badge key={idx} variant="outline" className="text-xs border-gray-300">
                               {feature}
@@ -790,10 +800,16 @@ export default function HomePage() {
                         </div>
                       </div>
                       <div className="flex gap-2 mt-auto">
-                        <Button className="flex-1 text-white border-0" style={{ backgroundColor: product.color }}>
+                        <Button
+                          className="flex-1 text-white border-0 text-sm md:text-base"
+                          style={{ backgroundColor: product.color }}
+                        >
                           <a href="#contact">Request Quote</a>
                         </Button>
-                        <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50">
+                        <Button
+                          variant="outline"
+                          className="border-gray-300 text-gray-700 hover:bg-gray-50 text-sm md:text-base"
+                        >
                           <a href="#contact">Sample</a>
                         </Button>
                       </div>
@@ -807,23 +823,23 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6">Our Services</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Comprehensive agricultural export services tailored for international partners
             </p>
           </motion.div>
 
           <motion.div
-            className="grid md:grid-cols-3 gap-8 mb-16"
+            className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -831,16 +847,18 @@ export default function HomePage() {
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
+                <Card className="p-6 md:p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
                   <CardContent className="p-0">
                     <div
-                      className="w-16 h-16 rounded-full flex items-center justify-center mb-6"
+                      className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4 md:mb-6"
                       style={{ backgroundColor: service.color }}
                     >
-                      <service.icon className="w-8 h-8 text-white" />
+                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">{service.title}</h3>
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6">
+                      {service.description}
+                    </p>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
@@ -856,15 +874,15 @@ export default function HomePage() {
           </motion.div>
 
           {/* Export Process */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-3xl font-bold text-green-800 mb-8">Our Export Process</h3>
-              <div className="space-y-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-6 md:mb-8">Our Export Process</h3>
+              <div className="space-y-4 md:space-y-6">
                 {[
                   {
                     step: "01",
@@ -897,16 +915,16 @@ export default function HomePage() {
                     color: "#0891b2",
                   },
                 ].map((process, index) => (
-                  <div key={index} className="flex items-start space-x-4">
+                  <div key={index} className="flex items-start space-x-3 md:space-x-4">
                     <div
-                      className="text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0"
+                      className="text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0"
                       style={{ backgroundColor: process.color }}
                     >
                       {process.step}
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-gray-800 mb-2">{process.title}</h4>
-                      <p className="text-gray-600 leading-relaxed">{process.description}</p>
+                      <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">{process.title}</h4>
+                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">{process.description}</p>
                     </div>
                   </div>
                 ))}
@@ -924,7 +942,7 @@ export default function HomePage() {
                 alt="Export process"
                 width={500}
                 height={600}
-                className="rounded-2xl shadow-2xl"
+                className="rounded-xl md:rounded-2xl shadow-2xl w-full h-auto"
               />
             </motion.div>
           </div>
@@ -932,24 +950,24 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-100">
+      <section id="contact" className="py-12 md:py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">Contact Neo Farms</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6">Contact EcoFarms</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Ready to partner with us? Get in touch for quotes, samples, or to discuss your requirements
             </p>
           </motion.div>
 
           {/* Contact Information */}
           <motion.div
-            className="grid md:grid-cols-3 gap-8 mb-16"
+            className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -973,39 +991,39 @@ export default function HomePage() {
               {
                 icon: Mail,
                 title: "Email",
-                info: "info@neofarms.co.tz",
+                info: "info@ecofarms.co.tz",
                 description: "We respond within 24 hours",
                 color: "#9333ea",
               },
             ].map((contact, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
+                <Card className="text-center p-6 md:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
                   <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6"
                     style={{ backgroundColor: contact.color }}
                   >
-                    <contact.icon className="w-8 h-8 text-white" />
+                    <contact.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">{contact.title}</h3>
-                  <p className="text-xl font-semibold text-gray-800 mb-2">{contact.info}</p>
-                  <p className="text-gray-600">{contact.description}</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-2">{contact.title}</h3>
+                  <p className="text-lg md:text-xl font-semibold text-gray-800 mb-2">{contact.info}</p>
+                  <p className="text-sm md:text-base text-gray-600">{contact.description}</p>
                 </Card>
               </motion.div>
             ))}
           </motion.div>
 
           {/* Contact Form */}
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="p-8 bg-white shadow-xl border-0">
+              <Card className="p-6 md:p-8 bg-white shadow-xl border-0">
                 <CardContent className="p-0">
-                  <h3 className="text-3xl font-bold text-green-800 mb-6">Send Us a Message</h3>
-                  <form className="space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-4 md:mb-6">Send Us a Message</h3>
+                  <form className="space-y-4 md:space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
@@ -1070,7 +1088,7 @@ export default function HomePage() {
                         className="border-gray-300"
                       />
                     </div>
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg font-semibold">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-base md:text-lg font-semibold">
                       Send Message
                     </Button>
                   </form>
@@ -1083,16 +1101,16 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6 md:space-y-8"
             >
               {/* Business Hours */}
-              <Card className="p-6 bg-white shadow-lg border-0">
+              <Card className="p-4 md:p-6 bg-white shadow-lg border-0">
                 <CardContent className="p-0">
-                  <div className="flex items-center mb-4">
-                    <Clock className="w-6 h-6 text-green-600 mr-3" />
-                    <h4 className="text-xl font-bold text-gray-800">Business Hours</h4>
+                  <div className="flex items-center mb-3 md:mb-4">
+                    <Clock className="w-5 h-5 md:w-6 md:h-6 text-green-600 mr-3" />
+                    <h4 className="text-lg md:text-xl font-bold text-gray-800">Business Hours</h4>
                   </div>
-                  <div className="space-y-2 text-gray-600">
+                  <div className="space-y-2 text-sm md:text-base text-gray-600">
                     <div className="flex justify-between">
                       <span>Monday - Friday:</span>
                       <span>8:00 AM - 6:00 PM EAT</span>
@@ -1105,7 +1123,7 @@ export default function HomePage() {
                       <span>Sunday:</span>
                       <span>Closed</span>
                     </div>
-                    <p className="text-sm text-green-600 mt-3">
+                    <p className="text-xs md:text-sm text-green-600 mt-3">
                       * Emergency support available 24/7 for existing orders
                     </p>
                   </div>
@@ -1113,41 +1131,41 @@ export default function HomePage() {
               </Card>
 
               {/* Quick Facts */}
-              <Card className="p-6 bg-gray-50 shadow-lg border-0">
+              <Card className="p-4 md:p-6 bg-gray-50 shadow-lg border-0">
                 <CardContent className="p-0">
-                  <div className="flex items-center mb-4">
-                    <Globe className="w-6 h-6 text-blue-600 mr-3" />
-                    <h4 className="text-xl font-bold text-gray-800">Quick Facts</h4>
+                  <div className="flex items-center mb-3 md:mb-4">
+                    <Globe className="w-5 h-5 md:w-6 md:h-6 text-blue-600 mr-3" />
+                    <h4 className="text-lg md:text-xl font-bold text-gray-800">Quick Facts</h4>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                      <span className="text-gray-600">Response time: Within 24 hours</span>
+                      <span className="text-sm md:text-base text-gray-600">Response time: Within 24 hours</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                      <span className="text-gray-600">Sample delivery: 5-7 business days</span>
+                      <span className="text-sm md:text-base text-gray-600">Sample delivery: 5-7 business days</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                      <span className="text-gray-600">Minimum order quantities available</span>
+                      <span className="text-sm md:text-base text-gray-600">Minimum order quantities available</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                      <span className="text-gray-600">Custom packaging solutions</span>
+                      <span className="text-sm md:text-base text-gray-600">Custom packaging solutions</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Team Support */}
-              <Card className="p-6 bg-white shadow-lg border-0">
+              <Card className="p-4 md:p-6 bg-white shadow-lg border-0">
                 <CardContent className="p-0">
-                  <div className="flex items-center mb-4">
-                    <Users className="w-6 h-6 text-purple-600 mr-3" />
-                    <h4 className="text-xl font-bold text-gray-800">Our Team</h4>
+                  <div className="flex items-center mb-3 md:mb-4">
+                    <Users className="w-5 h-5 md:w-6 md:h-6 text-purple-600 mr-3" />
+                    <h4 className="text-lg md:text-xl font-bold text-gray-800">Our Team</h4>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                     Our experienced export team includes agricultural specialists, quality control experts, and
                     logistics coordinators ready to assist with your requirements.
                   </p>
@@ -1155,40 +1173,6 @@ export default function HomePage() {
               </Card>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">Ready to Partner with Neo Farms?</h2>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Join our network of satisfied international partners. Get premium Tanzanian crops with reliable service
-              and competitive pricing.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <a href="#contact">Get Quote</a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-green-600 text-green-600 hover:bg-green-50 hover:text-green-700 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <a href="#about">Learn More</a>
-              </Button>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>

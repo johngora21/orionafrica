@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="bg-green-600 p-2 rounded-lg">
                 <Leaf className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold">Neo Farms</span>
+              <span className="text-2xl font-bold">EcoFarms</span>
             </div>
             <p className="text-green-100 leading-relaxed">
               Your trusted partner for premium Tanzanian agricultural exports. Serving international markets since 2021.
@@ -73,7 +73,7 @@ export default function Footer() {
 
         <div className="border-t border-green-800 mt-12 pt-8 text-center">
           <p className="text-green-100">
-            © {new Date().getFullYear()} Neo Farms. All rights reserved. | Established 2021
+            © {new Date().getFullYear()} EcoFarms. All rights reserved. | Established 2021
           </p>
         </div>
       </div>

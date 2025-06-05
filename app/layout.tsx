@@ -12,10 +12,10 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Neo Farms - Premium Tanzanian Agricultural Exports",
+  title: "EcoFarms - Premium Tanzanian Agricultural Exports",
   description:
     "Your trusted partner for high-quality agricultural exports from Tanzania. Serving governments and enterprises worldwide since 2021.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
