@@ -13,7 +13,6 @@ import {
   Truck,
   Award,
   Users,
-  Calendar,
   Target,
   Heart,
   Clock,
@@ -119,7 +118,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Mobile Responsive */}
-      <section id="home" className="relative min-h-screen overflow-hidden bg-black">
+      <section id="home" className="relative overflow-hidden bg-black pt-16 pb-8 md:pt-20 md:pb-12">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           {/* Floating geometric shapes - Responsive sizes */}
@@ -174,14 +173,14 @@ export default function HomePage() {
         </div>
 
         {/* Main Hero Content */}
-        <div className="relative z-20 container mx-auto px-4 h-screen flex items-center">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+        <div className="relative z-20 container mx-auto px-4 py-8 md:py-12">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center w-full">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="space-y-6 md:space-y-8 text-center lg:text-left"
+              className="space-y-4 md:space-y-6 text-center lg:text-left"
             >
               {/* Badge */}
               <motion.div
@@ -197,7 +196,7 @@ export default function HomePage() {
               {/* Main Heading */}
               <div className="space-y-3 md:space-y-4">
                 <motion.h1
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
@@ -315,11 +314,11 @@ export default function HomePage() {
                   className="relative"
                 >
                   {/* Product Card */}
-                  <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl md:rounded-3xl p-4 md:p-8 border border-white/20 shadow-2xl">
+                  <div className="relative bg-white/10 backdrop-blur-lg rounded-xl md:rounded-2xl p-3 md:p-6 border border-white/20 shadow-2xl">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl md:rounded-3xl"></div>
 
                     {/* Product Image */}
-                    <div className="relative h-48 md:h-80 rounded-xl md:rounded-2xl overflow-hidden mb-4 md:mb-6">
+                    <div className="relative h-40 md:h-60 rounded-lg md:rounded-xl overflow-hidden mb-3 md:mb-4">
                       <video
                         src={heroSlides[currentSlide].videoUrl}
                         autoPlay
@@ -412,16 +411,16 @@ export default function HomePage() {
 
         {/* Bottom Scroll Indicator */}
         <motion.div
-          className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+          className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 z-20"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
         >
-          <div className="flex flex-col items-center gap-1 md:gap-2 text-white/60">
-            <span className="text-xs md:text-sm">Scroll to explore</span>
-            <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="flex flex-col items-center gap-1 text-white/60">
+            <span className="text-xs">Scroll</span>
+            <div className="w-4 h-6 md:w-5 md:h-8 border-2 border-white/30 rounded-full flex justify-center">
               <motion.div
-                className="w-1 h-2 md:h-3 bg-white/60 rounded-full mt-1 md:mt-2"
-                animate={{ y: [0, 6, 0] }}
+                className="w-1 h-1.5 md:h-2 bg-white/60 rounded-full mt-1"
+                animate={{ y: [0, 4, 0] }}
                 transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
               />
             </div>
@@ -430,41 +429,12 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 md:py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {[
-              { icon: Calendar, number: "2021", label: "Established", color: "#16a34a" },
-              { icon: Globe, number: "25+", label: "Countries Served", color: "#2563eb" },
-              { icon: Award, number: "15+", label: "Premium Crops", color: "#9333ea" },
-              { icon: Users, number: "100+", label: "Satisfied Partners", color: "#ea580c" },
-            ].map((stat, index) => (
-              <motion.div key={index} variants={fadeInUp} className="text-center">
-                <div
-                  className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4"
-                  style={{ backgroundColor: stat.color }}
-                >
-                  <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-1 md:mb-2">{stat.number}</div>
-                <div className="text-sm md:text-base text-gray-600 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* About Section */}
-      <section id="about" className="py-12 md:py-20 bg-white">
+      <section id="about" className="py-8 md:py-12 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-8 md:mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -565,10 +535,10 @@ export default function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-12 md:py-20 bg-gray-100">
+      <section id="products" className="py-8 md:py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-8 md:mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -820,10 +790,10 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 md:py-20 bg-white">
+      <section id="services" className="py-8 md:py-12 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-8 md:mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -914,14 +884,14 @@ export default function HomePage() {
                 ].map((process, index) => (
                   <div key={index} className="flex items-start space-x-3 md:space-x-4">
                     <div
-                      className="text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0"
+                      className="text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-sm md:text-base flex-shrink-0"
                       style={{ backgroundColor: process.color }}
                     >
                       {process.step}
                     </div>
                     <div>
-                      <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">{process.title}</h4>
-                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">{process.description}</p>
+                      <h4 className="text-base md:text-lg font-bold text-gray-800 mb-1 md:mb-2">{process.title}</h4>
+                      <p className="text-sm text-gray-600 leading-relaxed">{process.description}</p>
                     </div>
                   </div>
                 ))}
@@ -947,10 +917,10 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-12 md:py-20 bg-gray-100">
+      <section id="contact" className="py-8 md:py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-8 md:mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -963,51 +933,34 @@ export default function HomePage() {
           </motion.div>
 
           {/* Contact Information */}
-          <motion.div
-            className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {[
-              {
-                icon: MapPin,
-                title: "Our Location",
-                info: "Dar es Salaam, Tanzania",
-                description: "East Africa's commercial hub with excellent port facilities",
-                color: "#16a34a",
-              },
-              {
-                icon: Phone,
-                title: "Phone",
-                info: "+255 XXX XXX XXX",
-                description: "Available 24/7 for urgent inquiries",
-                color: "#2563eb",
-              },
-              {
-                icon: Mail,
-                title: "Email",
-                info: "info@ecofarms.co.tz",
-                description: "We respond within 24 hours",
-                color: "#9333ea",
-              },
-            ].map((contact, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="text-center p-6 md:p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
-                  <div
-                    className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6"
-                    style={{ backgroundColor: contact.color }}
-                  >
-                    <contact.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-2">{contact.title}</h3>
-                  <p className="text-lg md:text-xl font-semibold text-gray-800 mb-2">{contact.info}</p>
-                  <p className="text-sm md:text-base text-gray-600">{contact.description}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
+          <div className="grid md:grid-cols-3 gap-8 mb-12 text-center">
+            <div>
+              <div className="flex items-center justify-center mb-4">
+                <MapPin className="w-6 h-6 text-green-600 mr-2" />
+                <h3 className="text-xl font-bold text-gray-800">Our Location</h3>
+              </div>
+              <p className="text-lg font-semibold text-gray-800 mb-2">Dar es Salaam, Tanzania</p>
+              <p className="text-base text-gray-600">East Africa's commercial hub with excellent port facilities</p>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-center mb-4">
+                <Phone className="w-6 h-6 text-blue-600 mr-2" />
+                <h3 className="text-xl font-bold text-gray-800">Phone</h3>
+              </div>
+              <p className="text-lg font-semibold text-gray-800 mb-2">+255 XXX XXX XXX</p>
+              <p className="text-base text-gray-600">Available 24/7 for urgent inquiries</p>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-center mb-4">
+                <Mail className="w-6 h-6 text-purple-600 mr-2" />
+                <h3 className="text-xl font-bold text-gray-800">Email</h3>
+              </div>
+              <p className="text-lg font-semibold text-gray-800 mb-2">info@ecofarms.co.tz</p>
+              <p className="text-base text-gray-600">We respond within 24 hours</p>
+            </div>
+          </div>
 
           {/* Contact Form */}
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
@@ -1066,13 +1019,12 @@ export default function HomePage() {
                           <SelectValue placeholder="Select products" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="coffee">Coffee</SelectItem>
-                          <SelectItem value="cashew">Cashew Nuts</SelectItem>
-                          <SelectItem value="sesame">Sesame Seeds</SelectItem>
-                          <SelectItem value="avocado">Avocados</SelectItem>
-                          <SelectItem value="tea">Black Tea</SelectItem>
-                          <SelectItem value="sunflower">Sunflower Seeds</SelectItem>
-                          <SelectItem value="multiple">Multiple Products</SelectItem>
+                          <SelectItem value="beverages">Beverages (Coffee, Tea)</SelectItem>
+                          <SelectItem value="nuts-seeds">Nuts & Seeds (Cashew, Sesame, Sunflower)</SelectItem>
+                          <SelectItem value="fruits">Fresh & Dried Fruits (Avocados, Mangoes, Pineapples)</SelectItem>
+                          <SelectItem value="industrial">Industrial Crops (Cotton, Sisal)</SelectItem>
+                          <SelectItem value="spices">Spices & Specialty (Vanilla, Macadamia)</SelectItem>
+                          <SelectItem value="multiple">Multiple Categories</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>

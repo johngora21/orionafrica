@@ -186,3 +186,48 @@ a:focus {
     padding-right: 1rem;
   }
 }
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Compact card styles for mobile */
+.card-mobile-compact {
+  padding: 0.75rem !important;
+}
+
+.card-mobile-compact h3 {
+  font-size: 1.25rem !important;
+}
+
+.card-mobile-compact p {
+  font-size: 0.875rem !important;
+}
