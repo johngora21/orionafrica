@@ -78,22 +78,22 @@ export default function HomePage() {
 
   const heroSlides = [
     {
-      title: "Premium Coffee",
-      subtitle: "From Kilimanjaro Heights",
-      image: "/placeholder.svg?height=600&width=800",
-      color: "#7c2d12",
+      title: "25+ Countries Served",
+      subtitle: "Global Export Success",
+      videoUrl: "/placeholder.svg?height=600&width=800",
+      achievement: "International Reach",
     },
     {
-      title: "Golden Cashews",
-      subtitle: "Grade A Quality",
-      image: "/placeholder.svg?height=600&width=800",
-      color: "#b45309",
+      title: "1000+ Tons Exported",
+      subtitle: "Premium Quality Delivered",
+      videoUrl: "/placeholder.svg?height=600&width=800",
+      achievement: "Volume Excellence",
     },
     {
-      title: "Fresh Avocados",
-      subtitle: "Export Excellence",
-      image: "/placeholder.svg?height=600&width=800",
-      color: "#15803d",
+      title: "100+ Happy Partners",
+      subtitle: "Trusted Relationships",
+      videoUrl: "/placeholder.svg?height=600&width=800",
+      achievement: "Partnership Success",
     },
   ]
 
@@ -119,7 +119,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Mobile Responsive */}
-      <section id="home" className="relative min-h-screen overflow-hidden bg-gray-900">
+      <section id="home" className="relative min-h-screen overflow-hidden bg-black">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           {/* Floating geometric shapes - Responsive sizes */}
@@ -320,26 +320,24 @@ export default function HomePage() {
 
                     {/* Product Image */}
                     <div className="relative h-48 md:h-80 rounded-xl md:rounded-2xl overflow-hidden mb-4 md:mb-6">
-                      <Image
-                        src={heroSlides[currentSlide].image || "/placeholder.svg"}
-                        alt={heroSlides[currentSlide].title}
-                        fill
-                        className="object-cover"
+                      <video
+                        src={heroSlides[currentSlide].videoUrl}
+                        autoPlay
+                        muted
+                        loop
+                        className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black/20"></div>
 
                       {/* Floating Badge */}
                       <div className="absolute top-2 md:top-4 right-2 md:right-4">
-                        <div
-                          className="px-2 md:px-3 py-1 rounded-full text-white text-xs md:text-sm font-medium"
-                          style={{ backgroundColor: heroSlides[currentSlide].color }}
-                        >
-                          Premium Grade
+                        <div className="px-2 md:px-3 py-1 rounded-full bg-green-600 text-white text-xs md:text-sm font-medium">
+                          {heroSlides[currentSlide].achievement}
                         </div>
                       </div>
                     </div>
 
-                    {/* Product Info */}
+                    {/* Success Info */}
                     <div className="space-y-3 md:space-y-4">
                       <div>
                         <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">
@@ -348,23 +346,22 @@ export default function HomePage() {
                         <p className="text-sm md:text-base text-gray-300">{heroSlides[currentSlide].subtitle}</p>
                       </div>
 
-                      {/* Rating */}
+                      {/* Success Indicator */}
                       <div className="flex items-center gap-2">
                         <div className="flex items-center">
                           {[...Array(5)].map((_, i) => (
                             <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-yellow-400 text-yellow-400" />
                           ))}
                         </div>
-                        <span className="text-gray-300 text-xs md:text-sm">Export Quality</span>
+                        <span className="text-gray-300 text-xs md:text-sm">Success Story</span>
                       </div>
 
                       {/* Quick Action */}
                       <Button
                         size="sm"
-                        className="w-full text-white border-0 text-sm md:text-base"
-                        style={{ backgroundColor: heroSlides[currentSlide].color }}
+                        className="w-full bg-green-600 hover:bg-green-700 text-white border-0 text-sm md:text-base"
                       >
-                        <a href="#contact">Request Sample</a>
+                        <a href="#contact">Learn More</a>
                       </Button>
                     </div>
                   </div>
