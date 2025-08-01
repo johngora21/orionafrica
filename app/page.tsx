@@ -129,16 +129,7 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="text-center lg:text-left"
             >
-              {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-green-600/10 border border-green-600/20 rounded-full px-4 py-2 mb-8"
-              >
-                <Sparkles className="w-4 h-4 text-green-600" />
-                <span className="text-sm font-medium text-green-600">Trusted Since 2021</span>
-              </motion.div>
+
 
               {/* Main Heading */}
               <motion.h1
@@ -441,6 +432,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "AA",
                   color: "#7c2d12", // Brown
+                  price: "12,500",
+                  minOrder: "1000 kg",
                 },
                 {
                   name: "Grade A Cashew Nuts",
@@ -452,6 +445,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Grade A",
                   color: "#b45309", // Amber
+                  price: "25,000",
+                  minOrder: "500 kg",
                 },
                 {
                   name: "White Sesame Seeds",
@@ -463,6 +458,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#16a34a", // Green
+                  price: "8,500",
+                  minOrder: "2000 kg",
                 },
                 {
                   name: "Fresh Avocados",
@@ -470,10 +467,12 @@ export default function HomePage() {
                   description:
                     "Premium Hass and Fuerte avocados grown in optimal conditions with careful harvesting and packing.",
                   features: ["Hass & Fuerte", "Export Quality", "Cold Chain", "Year Round"],
-                  image: "/Africado-sustainable-avocado-farming-in-Tanzania.webp",
+                  image: "/66fa7c77ebf0e0014afbc64e_lg.webp",
                   rating: 5,
                   exportGrade: "Class I",
                   color: "#15803d", // Dark Green
+                  price: "7,200",
+                  minOrder: "500 kg",
                 },
                 {
                   name: "Fresh Pineapples",
@@ -485,6 +484,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Class I",
                   color: "#f59e0b", // Orange
+                  price: "4,800",
+                  minOrder: "1000 kg",
                 },
                 {
                   name: "Premium Maize",
@@ -496,6 +497,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Grade A",
                   color: "#fbbf24", // Yellow
+                  price: "2,200",
+                  minOrder: "5000 kg",
                 },
                 {
                   name: "Quality Beans",
@@ -507,6 +510,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#dc2626", // Red
+                  price: "5,500",
+                  minOrder: "2000 kg",
                 },
                 {
                   name: "Sunflower Oil",
@@ -518,6 +523,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#eab308", // Yellow
+                  price: "9,500",
+                  minOrder: "1000 L",
                 },
                 {
                   name: "Fresh Onions",
@@ -529,6 +536,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Class I",
                   color: "#f97316", // Orange
+                  price: "3,200",
+                  minOrder: "2000 kg",
                 },
                 {
                   name: "Traditional Cowpeas",
@@ -540,6 +549,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Grade A",
                   color: "#059669", // Green
+                  price: "4,500",
+                  minOrder: "1500 kg",
                 },
                 {
                   name: "Pigeon Peas",
@@ -551,6 +562,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#7c3aed", // Purple
+                  price: "6,200",
+                  minOrder: "1000 kg",
                 },
                 {
                   name: "Green Grams",
@@ -562,6 +575,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Grade A",
                   color: "#16a34a", // Green
+                  price: "5,300",
+                  minOrder: "1500 kg",
                 },
                 {
                   name: "Premium Groundnuts",
@@ -573,6 +588,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Grade A",
                   color: "#92400e", // Brown
+                  price: "11,500",
+                  minOrder: "1000 kg",
                 },
 
                 {
@@ -585,6 +602,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#7c2d12", // Brown
+                  price: "125,000",
+                  minOrder: "100 kg",
                 },
                 {
                   name: "Quality Rice",
@@ -596,6 +615,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Grade A",
                   color: "#fef3c7", // Light Yellow
+                  price: "3,800",
+                  minOrder: "3000 kg",
                 },
                 {
                   name: "Wheat Grains",
@@ -607,6 +628,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#fbbf24", // Yellow
+                  price: "4,200",
+                  minOrder: "2000 kg",
                 },
 
                 {
@@ -619,6 +642,8 @@ export default function HomePage() {
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#a16207", // Brown
+                  price: "2,800",
+                  minOrder: "1500 kg",
                 }
               ].map((product, index) => (
                 <motion.div
@@ -671,6 +696,14 @@ export default function HomePage() {
                               {feature}
                             </Badge>
                           ))}
+                        </div>
+                        <div className="mb-3 md:mb-4">
+                          <div className="text-lg font-bold text-green-600">
+                            TZS {product.price}/kg
+                          </div>
+                          <div className="text-sm text-gray-500">
+                            Min. Order: {product.minOrder}
+                          </div>
                         </div>
                       </div>
                       <div className="flex gap-2 mt-auto">
