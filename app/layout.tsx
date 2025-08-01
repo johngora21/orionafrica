@@ -12,9 +12,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "EcoFarms - Premium Tanzanian Agricultural Exports",
-  description:
-    "Your trusted partner for high-quality agricultural exports from Tanzania. Serving governments and enterprises worldwide since 2021.",
+          title: "Orion Africa - Premium Tanzanian Agricultural Exports",
+        description:
+          "Your trusted partner for high-quality agricultural exports from Tanzania. Serving governments and enterprises worldwide since 2021.",
   generator: "v0.dev",
 }
 

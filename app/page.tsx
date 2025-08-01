@@ -77,21 +77,21 @@ export default function HomePage() {
 
   const heroSlides = [
     {
-      title: "25+ Countries Served",
-      subtitle: "Global Export Success",
-      videoUrl: "/placeholder.svg?height=600&width=800",
-      achievement: "International Reach",
+      title: "Sustainable Avocado Farming",
+      subtitle: "Premium Tanzanian Avocados",
+      videoUrl: "/Africado-sustainable-avocado-farming-in-Tanzania.webp",
+      achievement: "Sustainable",
     },
     {
-      title: "1000+ Tons Exported",
-      subtitle: "Premium Quality Delivered",
-      videoUrl: "/placeholder.svg?height=600&width=800",
-      achievement: "Volume Excellence",
+      title: "Global Export Excellence",
+      subtitle: "International Port Operations",
+      videoUrl: "/Adani-Ports.jpg",
+      achievement: "Global Reach",
     },
     {
       title: "100+ Happy Partners",
       subtitle: "Trusted Relationships",
-      videoUrl: "/placeholder.svg?height=600&width=800",
+      videoUrl: "/Africado-sustainable-avocado-farming-in-Tanzania.webp",
       achievement: "Partnership Success",
     },
   ]
@@ -134,10 +134,10 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-8"
+                className="inline-flex items-center gap-2 bg-green-600/10 border border-green-600/20 rounded-full px-4 py-2 mb-8"
               >
-                <Sparkles className="w-4 h-4 text-green-400" />
-                <span className="text-sm font-medium text-green-400">Trusted Since 2021</span>
+                <Sparkles className="w-4 h-4 text-green-600" />
+                <span className="text-sm font-medium text-green-600">Trusted Since 2021</span>
               </motion.div>
 
               {/* Main Heading */}
@@ -148,7 +148,7 @@ export default function HomePage() {
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
               >
                 Premium
-                <span className="block text-green-400 mt-2">Tanzanian</span>
+                <span className="block text-green-600 mt-2">Tanzanian</span>
                 <span className="block text-white mt-2">Agriculture</span>
               </motion.h1>
 
@@ -173,7 +173,7 @@ export default function HomePage() {
                 {[
                   { value: "25+", label: "Countries" },
                   { value: "100+", label: "Partners" },
-                  { value: "15+", label: "Crops" },
+                  { value: "17+", label: "Crops" },
                 ].map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
@@ -191,7 +191,7 @@ export default function HomePage() {
               >
                 <Button
                   size="lg"
-                  className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <a href="#products" className="flex items-center gap-2">
                     Explore Products
@@ -223,7 +223,7 @@ export default function HomePage() {
                   
                   {/* Achievement Badge */}
                   <div className="absolute top-4 right-4">
-                    <div className="px-4 py-2 bg-green-500 text-white text-sm font-medium rounded-full">
+                    <div className="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-full">
                       {heroSlides[currentSlide].achievement}
                     </div>
                   </div>
@@ -249,7 +249,7 @@ export default function HomePage() {
                   {/* Action Button */}
                   <Button
                     size="lg"
-                    className="w-full bg-green-500 hover:bg-green-600 text-white rounded-xl"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white rounded-xl"
                   >
                     <a href="#contact">Learn More</a>
                   </Button>
@@ -263,7 +263,7 @@ export default function HomePage() {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentSlide ? "bg-green-400 w-4" : "bg-white/30"
+                      index === currentSlide ? "bg-green-600 w-4" : "bg-white/30"
                     }`}
                   />
                 ))}
@@ -285,7 +285,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6">About EcoFarms</h2>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 mb-4 md:mb-6">About Orion Africa</h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Pioneering agricultural excellence in Tanzania since 2021, connecting local farmers with global markets
             </p>
@@ -298,10 +298,10 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-4 md:mb-6">Our Story</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-green-600 mb-4 md:mb-6">Our Story</h3>
               <div className="space-y-4 md:space-y-6 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  Founded in 2021 in Dar es Salaam, EcoFarms emerged from a vision to bridge Tanzania's rich
+                  Founded in 2021 in Dar es Salaam, Orion Africa emerged from a vision to bridge Tanzania's rich
                   agricultural heritage with growing global demand for premium, sustainably-sourced crops.
                 </p>
                 <p>
@@ -314,7 +314,7 @@ export default function HomePage() {
                 </p>
               </div>
             </motion.div>
-            <motion.div
+                        <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -322,8 +322,8 @@ export default function HomePage() {
               className="relative"
             >
               <Image
-                src="/placeholder.svg?height=500&width=600"
-                alt="EcoFarms facility"
+                src="/shutterstock_499876297-1024x767.jpg"
+                alt="Orion Africa agricultural operations - sustainable farming in Tanzania"
                 width={600}
                 height={400}
                 className="rounded-xl md:rounded-2xl shadow-2xl w-full h-auto object-cover"
@@ -389,7 +389,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 mb-4 md:mb-6">
               Premium Export Crops
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -399,18 +399,21 @@ export default function HomePage() {
           </motion.div>
 
           {/* Horizontal Scrolling Container with Navigation Buttons */}
-          <div className="relative">
+          <div className="relative group">
+            {/* Gradient overlays to indicate scrollable content */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-gray-100 to-transparent pointer-events-none z-5"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-gray-100 to-transparent pointer-events-none z-5"></div>
             <div className="flex justify-between absolute top-1/2 -translate-y-1/2 w-full z-10 px-2 md:px-4">
               <button
                 onClick={scrollLeft}
-                className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
+                className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none transition-opacity"
                 aria-label="Scroll left"
               >
                 <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
               </button>
               <button
                 onClick={scrollRight}
-                className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
+                className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none transition-opacity"
                 aria-label="Scroll right"
               >
                 <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
@@ -419,10 +422,12 @@ export default function HomePage() {
 
             <div
               ref={scrollContainerRef}
-              className="flex gap-4 md:gap-6 overflow-x-auto pb-4 md:pb-6 scrollbar-hide px-2 md:px-4"
+              className="flex gap-4 md:gap-6 overflow-x-auto pb-4 md:pb-6 scrollbar-hide horizontal-scroll px-2 md:px-4"
               style={{
                 scrollbarWidth: "none",
                 msOverflowStyle: "none",
+                scrollBehavior: "smooth",
+                WebkitOverflowScrolling: "touch",
               }}
             >
               {[
@@ -432,7 +437,7 @@ export default function HomePage() {
                   description:
                     "High-altitude grown Arabica beans with exceptional flavor profiles from Mount Kilimanjaro and Meru slopes.",
                   features: ["Single Origin", "High Altitude", "Specialty Grade", "Fair Trade"],
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/types-of-coffee-beans-in-malaysia-featured.jpeg",
                   rating: 5,
                   exportGrade: "AA",
                   color: "#7c2d12", // Brown
@@ -443,7 +448,7 @@ export default function HomePage() {
                   description:
                     "Premium quality cashew nuts processed to international standards with careful selection and packaging.",
                   features: ["Grade A Quality", "Raw/Roasted", "Bulk Packaging", "Export Ready"],
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/cashew-cores-1549580_1280.jpg",
                   rating: 5,
                   exportGrade: "Grade A",
                   color: "#b45309", // Amber
@@ -454,7 +459,7 @@ export default function HomePage() {
                   description:
                     "High oil content white sesame seeds perfect for oil extraction and food processing applications.",
                   features: ["High Oil Content", "99% Purity", "Natural", "Bulk Available"],
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/sesame-seeds-white-spices100.jpg",
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#16a34a", // Green
@@ -465,32 +470,155 @@ export default function HomePage() {
                   description:
                     "Premium Hass and Fuerte avocados grown in optimal conditions with careful harvesting and packing.",
                   features: ["Hass & Fuerte", "Export Quality", "Cold Chain", "Year Round"],
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/Africado-sustainable-avocado-farming-in-Tanzania.webp",
                   rating: 5,
                   exportGrade: "Class I",
                   color: "#15803d", // Dark Green
                 },
                 {
-                  name: "Black CTC Tea",
-                  category: "Beverages",
+                  name: "Fresh Pineapples",
+                  category: "Fresh Fruits",
                   description:
-                    "High-quality black tea processed using Crush, Tear, Curl method offering strong flavor and excellent color.",
-                  features: ["CTC Process", "Strong Flavor", "Export Grade", "Bulk Packaging"],
-                  image: "/placeholder.svg?height=300&width=400",
+                    "Sweet and juicy pineapples grown in tropical conditions, perfect for fresh consumption and processing.",
+                  features: ["Sweet Variety", "Export Quality", "Fresh & Processed", "Year Round"],
+                  image: "/pineapple2.jpg",
                   rating: 5,
-                  exportGrade: "FTGFOP",
-                  color: "#b91c1c", // Red
+                  exportGrade: "Class I",
+                  color: "#f59e0b", // Orange
                 },
                 {
-                  name: "Sunflower Seeds",
-                  category: "Seeds & Grains",
+                  name: "Premium Maize",
+                  category: "Grains & Cereals",
                   description:
-                    "Oil-rich sunflower seeds ideal for oil extraction and snack food production with high oil content.",
-                  features: ["High Oil Content", "Uniform Size", "Food Grade", "Industrial Use"],
-                  image: "/placeholder.svg?height=300&width=400",
+                    "High-quality maize grains suitable for human consumption and animal feed with excellent nutritional value.",
+                  features: ["High Protein", "Non-GMO", "Bulk Available", "Export Ready"],
+                  image: "/8e284eaf0fcc410a87514b70f1a0fad7.webp",
+                  rating: 5,
+                  exportGrade: "Grade A",
+                  color: "#fbbf24", // Yellow
+                },
+                {
+                  name: "Quality Beans",
+                  category: "Legumes & Pulses",
+                  description:
+                    "Various bean varieties including kidney, pinto, and black beans with high protein content.",
+                  features: ["High Protein", "Multiple Varieties", "Bulk Packaging", "Export Grade"],
+                  image: "/cd2a8a6f-9c2f-4b1f-a5e5-87aa0cf9ce6e-YELLOW BEANS.jpg",
+                  rating: 5,
+                  exportGrade: "Premium",
+                  color: "#dc2626", // Red
+                },
+                {
+                  name: "Sunflower Oil",
+                  category: "Oils & Fats",
+                  description:
+                    "Premium sunflower oil extracted from high-quality seeds, perfect for cooking and industrial applications.",
+                  features: ["High Quality", "Pure Extraction", "Cooking Grade", "Industrial Use"],
+                  image: "/images.jpeg",
                   rating: 5,
                   exportGrade: "Premium",
                   color: "#eab308", // Yellow
+                },
+                {
+                  name: "Fresh Onions",
+                  category: "Vegetables",
+                  description:
+                    "Premium red, white, and shallot onions grown in optimal conditions for export markets.",
+                  features: ["Multiple Varieties", "Export Quality", "Year Round", "Bulk Available"],
+                  image: "/product-jpeg-500x500.webp",
+                  rating: 5,
+                  exportGrade: "Class I",
+                  color: "#f97316", // Orange
+                },
+                {
+                  name: "Traditional Cowpeas",
+                  category: "Legumes & Pulses",
+                  description:
+                    "Traditional cowpeas with high protein content, drought-resistant and perfect for regional markets.",
+                  features: ["High Protein", "Drought Resistant", "Traditional", "Regional Export"],
+                  image: "/BlackEyedPeas.jpeg",
+                  rating: 5,
+                  exportGrade: "Grade A",
+                  color: "#059669", // Green
+                },
+                {
+                  name: "Pigeon Peas",
+                  category: "Legumes & Pulses",
+                  description:
+                    "Growing export market for pigeon peas with high protein content and gluten-free properties.",
+                  features: ["High Protein", "Gluten Free", "Growing Market", "Export Ready"],
+                  image: "/Whole-Pigeon-Peas-Wholesale-Split-Peas.avif",
+                  rating: 5,
+                  exportGrade: "Premium",
+                  color: "#7c3aed", // Purple
+                },
+                {
+                  name: "Green Grams",
+                  category: "Legumes & Pulses",
+                  description:
+                    "Popular green grams in regional markets with quick cooking properties and high nutritional value.",
+                  features: ["Quick Cooking", "High Protein", "Regional Popular", "Export Grade"],
+                  image: "/green-gram-1713261798-7386693.jpeg",
+                  rating: 5,
+                  exportGrade: "Grade A",
+                  color: "#16a34a", // Green
+                },
+                {
+                  name: "Premium Groundnuts",
+                  category: "Nuts & Seeds",
+                  description:
+                    "High-quality groundnuts/peanuts available in raw and processed forms for various markets.",
+                  features: ["High Oil Content", "Raw & Processed", "Multiple Grades", "Export Ready"],
+                  image: "/java-peanuts-1725343548-7588180.jpeg",
+                  rating: 5,
+                  exportGrade: "Grade A",
+                  color: "#92400e", // Brown
+                },
+
+                {
+                  name: "Premium Vanilla",
+                  category: "Spices & Herbs",
+                  description:
+                    "High-value vanilla beans with growing demand in international markets for premium products.",
+                  features: ["High Value", "Premium Quality", "Growing Demand", "International Market"],
+                  image: "/WhatsApp-Image-2023-03-21-at-17.05.11-e1679489714228.jpeg",
+                  rating: 5,
+                  exportGrade: "Premium",
+                  color: "#7c2d12", // Brown
+                },
+                {
+                  name: "Quality Rice",
+                  category: "Grains & Cereals",
+                  description:
+                    "Premium rice varieties including local and imported types for diverse market requirements.",
+                  features: ["Multiple Varieties", "Local & Imported", "Bulk Available", "Export Grade"],
+                  image: "/hq720.jpg",
+                  rating: 5,
+                  exportGrade: "Grade A",
+                  color: "#fef3c7", // Light Yellow
+                },
+                {
+                  name: "Wheat Grains",
+                  category: "Grains & Cereals",
+                  description:
+                    "Limited production wheat grains with high quality for specific market requirements.",
+                  features: ["Limited Production", "High Quality", "Specific Markets", "Export Ready"],
+                  image: "/wholesale-price-export-quality-100-organic-and-natural-dried-brown-wheat-grain-266.jpg",
+                  rating: 5,
+                  exportGrade: "Premium",
+                  color: "#fbbf24", // Yellow
+                },
+
+                {
+                  name: "Traditional Millet",
+                  category: "Grains & Cereals",
+                  description:
+                    "Traditional millet staple crop with excellent nutritional properties and regional popularity.",
+                  features: ["Traditional Staple", "High Nutrition", "Regional Popular", "Export Ready"],
+                  image: "/texture-grain-yellow-millet-white-background_67651-3884.avif",
+                  rating: 5,
+                  exportGrade: "Premium",
+                  color: "#a16207", // Brown
                 }
               ].map((product, index) => (
                 <motion.div
@@ -558,6 +686,12 @@ export default function HomePage() {
                         >
                           <a href="#contact">Sample</a>
                         </Button>
+                        <Button
+                          size="sm"
+                          className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1 rounded-lg"
+                        >
+                          <a href="#contact">Quote</a>
+                        </Button>
                       </div>
                     </CardContent>
                   </Card>
@@ -578,7 +712,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 mb-4 md:mb-6">Our Services</h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Comprehensive agricultural export services tailored for international partners
             </p>
@@ -627,7 +761,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-6 md:mb-8">Our Export Process</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-green-600 mb-6 md:mb-8">Our Export Process</h3>
               <div className="space-y-4 md:space-y-6">
                 {[
                   {
@@ -683,13 +817,53 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <Image
-                src="/placeholder.svg?height=600&width=500"
-                alt="Export process"
-                width={500}
-                height={600}
-                className="rounded-xl md:rounded-2xl shadow-2xl w-full h-auto"
-              />
+              <div className="relative bg-white/95 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent rounded-2xl"></div>
+                
+                {/* Product Image */}
+                <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden mb-6">
+                  <Image
+                    src="/agriculture-trucks.jpeg"
+                    alt="Export process"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  
+                  {/* Achievement Badge */}
+                  <div className="absolute top-4 right-4">
+                    <div className="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-full">
+                      Global Logistics
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Info */}
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional Export Services</h3>
+                    <p className="text-gray-700">World-class logistics and transportation for your agricultural exports</p>
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center gap-2">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-gray-600">Reliable Service</span>
+                  </div>
+
+                  {/* Action Button */}
+                  <Button
+                    size="lg"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white rounded-xl"
+                  >
+                    <a href="#contact">Contact Us</a>
+                  </Button>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -722,7 +896,7 @@ export default function HomePage() {
             >
               <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-2 bg-green-100 rounded-2xl">
+                  <div className="p-2 bg-green-600/10 rounded-2xl">
                     <Mail className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
@@ -737,14 +911,14 @@ export default function HomePage() {
                       <label className="text-sm font-medium text-gray-700 tracking-tight">First Name</label>
                       <Input 
                         placeholder="John" 
-                        className="h-10 bg-gray-50 border-gray-200 focus:border-green-500 focus:ring-green-500 rounded-2xl placeholder:text-gray-400 font-light"
+                        className="h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-gray-700 tracking-tight">Last Name</label>
                       <Input 
                         placeholder="Doe" 
-                        className="h-10 bg-gray-50 border-gray-200 focus:border-green-500 focus:ring-green-500 rounded-2xl placeholder:text-gray-400 font-light"
+                        className="h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                       />
                     </div>
                   </div>
@@ -754,7 +928,7 @@ export default function HomePage() {
                     <Input 
                       type="email" 
                       placeholder="john@company.com" 
-                      className="h-10 bg-gray-50 border-gray-200 focus:border-green-500 focus:ring-green-500 rounded-2xl placeholder:text-gray-400 font-light"
+                      className="h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                     />
                   </div>
 
@@ -762,7 +936,7 @@ export default function HomePage() {
                     <label className="text-sm font-medium text-gray-700 tracking-tight">Company</label>
                     <Input 
                       placeholder="Your company name" 
-                      className="h-10 bg-gray-50 border-gray-200 focus:border-green-500 focus:ring-green-500 rounded-2xl placeholder:text-gray-400 font-light"
+                      className="h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                     />
                   </div>
 
@@ -787,7 +961,7 @@ export default function HomePage() {
                     <Textarea 
                       placeholder="Tell us about your requirements..." 
                       rows={4}
-                      className="bg-gray-50 border-gray-200 focus:border-green-500 focus:ring-green-500 rounded-2xl placeholder:text-gray-400 font-light"
+                      className="bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                     />
                   </div>
 
@@ -852,7 +1026,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="text-sm text-gray-500 font-light">Phone</p>
-                      <p className="text-base font-medium text-gray-900 tracking-tight">+255 717 801 745</p>
+                      <p className="text-base font-medium text-gray-900 tracking-tight">+255 755 070 072</p>
                     </div>
                   </div>
 
@@ -862,7 +1036,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="text-sm text-gray-500 font-light">Email</p>
-                      <p className="text-base font-medium text-gray-900 tracking-tight">info@ecofarms.co.tz</p>
+                      <p className="text-base font-medium text-gray-900 tracking-tight">info@orionafrica.com</p>
                     </div>
                   </div>
 
@@ -878,20 +1052,20 @@ export default function HomePage() {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <div className="p-2 bg-green-100 rounded-2xl">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                      <div className="p-2 bg-green-600/10 rounded-2xl">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                       </svg>
                     </div>
                     <div>
                       <p className="text-sm text-gray-500 font-light">WhatsApp</p>
                       <a 
-                        href="https://wa.me/255717801745" 
+                        href="https://wa.me/255755070072" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-base font-medium text-gray-900 tracking-tight hover:text-green-600 transition-colors duration-300"
                       >
-                        +255 717 801 745
+                        +255 755 070 072
                       </a>
                     </div>
                   </div>
