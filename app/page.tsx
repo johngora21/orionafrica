@@ -121,26 +121,24 @@ export default function HomePage() {
       <section id="home" className="relative min-h-[90vh] bg-black overflow-hidden">
         {/* Main Content */}
         <div className="relative container mx-auto px-4 py-16 sm:py-20 md:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center lg:text-left"
+              className="text-center lg:text-left order-2 lg:order-1"
             >
-
-
               {/* Main Heading */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6"
               >
                 Premium
-                <span className="block text-green-600 mt-2">Tanzanian</span>
-                <span className="block text-white mt-2">Agriculture</span>
+                <span className="block text-green-600 mt-1 sm:mt-2">Tanzanian</span>
+                <span className="block text-white mt-1 sm:mt-2">Agriculture</span>
               </motion.h1>
 
               {/* Subtitle */}
@@ -148,7 +146,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0"
+                className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0"
               >
                 Your trusted partner for high-quality agricultural exports from Tanzania. Serving governments and
                 enterprises worldwide with premium crops and reliable service.
@@ -159,7 +157,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="grid grid-cols-3 gap-4 mb-8 max-w-xl mx-auto lg:mx-0"
+                className="grid grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0"
               >
                 {[
                   { value: "25+", label: "Countries" },
@@ -167,8 +165,8 @@ export default function HomePage() {
                   { value: "17+", label: "Crops" },
                 ].map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
                   </div>
                 ))}
               </motion.div>
@@ -178,15 +176,15 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
               >
                 <Button
                   size="lg"
-                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <a href="#products" className="flex items-center gap-2">
                     Explore Products
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                 </Button>
               </motion.div>
@@ -197,13 +195,13 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative"
+              className="relative order-1 lg:order-2"
             >
-              <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 shadow-2xl">
+              <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-4 sm:p-6 border border-white/10 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent rounded-2xl"></div>
                 
                 {/* Product Image */}
-                <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden mb-6">
+                <div className="relative h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-4 sm:mb-6">
                   <Image
                     src={heroSlides[currentSlide].videoUrl}
                     alt={heroSlides[currentSlide].title}
@@ -213,34 +211,34 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   
                   {/* Achievement Badge */}
-                  <div className="absolute top-4 right-4">
-                    <div className="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-full">
+                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                    <div className="px-3 sm:px-4 py-1 sm:py-2 bg-green-600 text-white text-xs sm:text-sm font-medium rounded-full">
                       {heroSlides[currentSlide].achievement}
                     </div>
                   </div>
                 </div>
 
                 {/* Product Info */}
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{heroSlides[currentSlide].title}</h3>
-                    <p className="text-gray-300">{heroSlides[currentSlide].subtitle}</p>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 sm:mb-2">{heroSlides[currentSlide].title}</h3>
+                    <p className="text-sm sm:text-base text-gray-300">{heroSlides[currentSlide].subtitle}</p>
                   </div>
 
                   {/* Rating */}
                   <div className="flex items-center gap-2">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <span className="text-sm text-gray-400">Success Story</span>
+                    <span className="text-xs sm:text-sm text-gray-400">Success Story</span>
                   </div>
 
                   {/* Action Button */}
                   <Button
                     size="lg"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white rounded-xl"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white rounded-xl text-sm sm:text-base"
                   >
                     <a href="#contact">Learn More</a>
                   </Button>
@@ -248,7 +246,7 @@ export default function HomePage() {
               </div>
 
               {/* Slide Indicators */}
-              <div className="flex justify-center gap-2 mt-6">
+              <div className="flex justify-center gap-2 mt-4 sm:mt-6">
                 {heroSlides.map((_, index) => (
                   <button
                     key={index}
@@ -276,21 +274,22 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 mb-4 md:mb-6">About Orion Africa</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 mb-4 md:mb-6">About Orion Africa</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Pioneering agricultural excellence in Tanzania since 2021, connecting local farmers with global markets
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-20">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-8 md:mb-12 lg:mb-20">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-green-600 mb-4 md:mb-6">Our Story</h3>
-              <div className="space-y-4 md:space-y-6 text-gray-600 text-base md:text-lg leading-relaxed">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600 mb-3 md:mb-4 lg:mb-6">Our Story</h3>
+              <div className="space-y-3 md:space-y-4 lg:space-y-6 text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
                 <p>
                   Founded in 2021 in Dar es Salaam, Orion Africa emerged from a vision to bridge Tanzania's rich
                   agricultural heritage with growing global demand for premium, sustainably-sourced crops.
@@ -305,12 +304,12 @@ export default function HomePage() {
                 </p>
               </div>
             </motion.div>
-                        <motion.div
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative order-1 lg:order-2"
             >
               <Image
                 src="/shutterstock_499876297-1024x767.jpg"
@@ -324,7 +323,7 @@ export default function HomePage() {
 
           {/* Mission, Vision, Values */}
           <motion.div
-            className="grid md:grid-cols-3 gap-6 md:gap-8"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -353,16 +352,16 @@ export default function HomePage() {
                 color: "#9333ea",
               },
             ].map((item, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="text-center p-6 md:p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
+              <motion.div key={index} variants={fadeInUp} className={index === 2 ? "sm:col-span-2 lg:col-span-1" : ""}>
+                <Card className="text-center p-4 sm:p-6 md:p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
                   <div
-                    className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6"
+                    className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-6"
                     style={{ backgroundColor: item.color }}
                   >
-                    <item.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                   </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">{item.title}</h4>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{item.description}</p>
+                  <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 sm:mb-3 md:mb-4">{item.title}</h4>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">{item.description}</p>
                 </Card>
               </motion.div>
             ))}
@@ -400,20 +399,20 @@ export default function HomePage() {
                 className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none transition-opacity"
                 aria-label="Scroll left"
               >
-                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
+                <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-800" />
               </button>
               <button
                 onClick={scrollRight}
                 className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none transition-opacity"
                 aria-label="Scroll right"
               >
-                <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
+                <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-gray-800" />
               </button>
             </div>
 
             <div
               ref={scrollContainerRef}
-              className="flex gap-4 md:gap-6 overflow-x-auto pb-4 md:pb-6 scrollbar-hide horizontal-scroll px-2 md:px-4"
+              className="flex gap-3 md:gap-4 lg:gap-6 overflow-x-auto pb-4 md:pb-6 scrollbar-hide horizontal-scroll px-2 md:px-4"
               style={{
                 scrollbarWidth: "none",
                 msOverflowStyle: "none",
@@ -648,82 +647,76 @@ export default function HomePage() {
               ].map((product, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-72 md:w-80"
+                  className="flex-shrink-0 w-64 sm:w-72 md:w-80"
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg h-full">
-                    <div className="relative h-40 md:h-48 overflow-hidden">
+                    <div className="relative h-32 sm:h-40 md:h-48 overflow-hidden">
                       <Image
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
                         className="object-cover transition-transform duration-300 hover:scale-110"
                       />
-                      <div className="absolute top-3 md:top-4 left-3 md:left-4">
+                      <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4">
                         <Badge
-                          className="text-white border-0 text-xs md:text-sm"
+                          className="text-white border-0 text-xs"
                           style={{ backgroundColor: product.color }}
                         >
                           {product.category}
                         </Badge>
                       </div>
-                      <div className="absolute top-3 md:top-4 right-3 md:right-4">
+                      <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4">
                         <Badge
                           variant="secondary"
-                          className="bg-white/90 text-gray-800 font-semibold text-xs md:text-sm"
+                          className="bg-white/90 text-gray-800 font-semibold text-xs"
                         >
                           {product.exportGrade}
                         </Badge>
                       </div>
                     </div>
-                    <CardContent className="p-4 md:p-6 flex flex-col h-full">
+                    <CardContent className="p-3 sm:p-4 md:p-6 flex flex-col h-full">
                       <div className="flex-grow">
-                        <div className="flex items-center justify-between mb-2 md:mb-3">
-                          <h3 className="text-lg md:text-xl font-bold text-gray-800">{product.name}</h3>
+                        <div className="flex items-center justify-between mb-2 sm:mb-3">
+                          <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-800 line-clamp-2">{product.name}</h3>
                           <div className="flex items-center">
                             {[...Array(product.rating)].map((_, i) => (
-                              <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-yellow-400 text-yellow-400" />
+                              <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
                         </div>
-                        <p className="text-gray-600 leading-relaxed mb-3 md:mb-4 text-sm">{product.description}</p>
-                        <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
-                          {product.features.map((feature, idx) => (
+                        <p className="text-gray-600 leading-relaxed mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm line-clamp-3">{product.description}</p>
+                        <div className="flex flex-wrap gap-1 mb-2 sm:mb-3 md:mb-4">
+                          {product.features.slice(0, 2).map((feature, idx) => (
                             <Badge key={idx} variant="outline" className="text-xs border-gray-300">
                               {feature}
                             </Badge>
                           ))}
                         </div>
-                        <div className="mb-3 md:mb-4">
-                          <div className="text-lg font-bold text-green-600">
+                        <div className="mb-2 sm:mb-3 md:mb-4">
+                          <div className="text-sm sm:text-base md:text-lg font-bold text-green-600">
                             TZS {product.price}/kg
                           </div>
-                          <div className="text-sm text-gray-500">
+                          <div className="text-xs sm:text-sm text-gray-500">
                             Min. Order: {product.minOrder}
                           </div>
                         </div>
                       </div>
-                      <div className="flex gap-2 mt-auto">
+                      <div className="flex gap-1 sm:gap-2 mt-auto">
                         <Button
-                          className="flex-1 text-white border-0 text-sm md:text-base"
+                          className="flex-1 text-white border-0 text-xs sm:text-sm"
                           style={{ backgroundColor: product.color }}
                         >
-                          <a href="#contact">Request Quote</a>
+                          <a href="#contact">Quote</a>
                         </Button>
                         <Button
                           variant="outline"
-                          className="border-gray-300 text-gray-700 hover:bg-gray-50 text-sm md:text-base"
+                          className="border-gray-300 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm"
                         >
                           <a href="#contact">Sample</a>
-                        </Button>
-                        <Button
-                          size="sm"
-                          className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1 rounded-lg"
-                        >
-                          <a href="#contact">Quote</a>
                         </Button>
                       </div>
                     </CardContent>
@@ -745,14 +738,14 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 mb-4 md:mb-6">Our Services</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 mb-4 md:mb-6">Our Services</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Comprehensive agricultural export services tailored for international partners
             </p>
           </motion.div>
 
           <motion.div
-            className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12 lg:mb-16"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -760,22 +753,22 @@ export default function HomePage() {
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="p-6 md:p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
+                <Card className="p-4 sm:p-6 md:p-8 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
                   <CardContent className="p-0">
                     <div
-                      className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4 md:mb-6"
+                      className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6"
                       style={{ backgroundColor: service.color }}
                     >
-                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                      <service.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">{service.title}</h3>
-                    <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 sm:mb-3 md:mb-4">{service.title}</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4 md:mb-6">
                       {service.description}
                     </p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-1 sm:space-y-2">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: service.color }}></div>
+                        <li key={idx} className="flex items-center text-xs sm:text-sm text-gray-600">
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mr-2 sm:mr-3" style={{ backgroundColor: service.color }}></div>
                           {feature}
                         </li>
                       ))}
@@ -787,15 +780,16 @@ export default function HomePage() {
           </motion.div>
 
           {/* Export Process */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-green-600 mb-6 md:mb-8">Our Export Process</h3>
-              <div className="space-y-4 md:space-y-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600 mb-4 sm:mb-6 md:mb-8">Our Export Process</h3>
+              <div className="space-y-3 sm:space-y-4 md:space-y-6">
                 {[
                   {
                     step: "01",
@@ -828,16 +822,16 @@ export default function HomePage() {
                     color: "#0891b2",
                   },
                 ].map((process, index) => (
-                  <div key={index} className="flex items-start space-x-3 md:space-x-4">
+                  <div key={index} className="flex items-start space-x-2 sm:space-x-3 md:space-x-4">
                     <div
-                      className="text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-sm md:text-base flex-shrink-0"
+                      className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm md:text-base flex-shrink-0"
                       style={{ backgroundColor: process.color }}
                     >
                       {process.step}
                     </div>
                     <div>
-                      <h4 className="text-base md:text-lg font-bold text-gray-800 mb-1 md:mb-2">{process.title}</h4>
-                      <p className="text-sm text-gray-600 leading-relaxed">{process.description}</p>
+                      <h4 className="text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-1 md:mb-2">{process.title}</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{process.description}</p>
                     </div>
                   </div>
                 ))}
@@ -848,13 +842,13 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative order-1 lg:order-2"
             >
-              <div className="relative bg-white/95 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-2xl">
+              <div className="relative bg-white/95 backdrop-blur-lg rounded-2xl p-4 sm:p-6 border border-gray-200 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent rounded-2xl"></div>
                 
                 {/* Product Image */}
-                <div className="relative h-64 sm:h-80 rounded-xl overflow-hidden mb-6">
+                <div className="relative h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-4 sm:mb-6">
                   <Image
                     src="/agriculture-trucks.jpeg"
                     alt="Export process"
@@ -864,34 +858,34 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   
                   {/* Achievement Badge */}
-                  <div className="absolute top-4 right-4">
-                    <div className="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-full">
+                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                    <div className="px-3 sm:px-4 py-1 sm:py-2 bg-green-600 text-white text-xs sm:text-sm font-medium rounded-full">
                       Global Logistics
                     </div>
                   </div>
                 </div>
 
                 {/* Product Info */}
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional Export Services</h3>
-                    <p className="text-gray-700">World-class logistics and transportation for your agricultural exports</p>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">Professional Export Services</h3>
+                    <p className="text-sm sm:text-base text-gray-700">World-class logistics and transportation for your agricultural exports</p>
                   </div>
 
                   {/* Rating */}
                   <div className="flex items-center gap-2">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <span className="text-sm text-gray-600">Reliable Service</span>
+                    <span className="text-xs sm:text-sm text-gray-600">Reliable Service</span>
                   </div>
 
                   {/* Action Button */}
                   <Button
                     size="lg"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white rounded-xl"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white rounded-xl text-sm sm:text-base"
                   >
                     <a href="#contact">Contact Us</a>
                   </Button>
@@ -903,22 +897,22 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white font-poppins">
+      <section id="contact" className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white font-poppins">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-8 md:mb-12 lg:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">Let's Connect</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">Let's Connect</h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-light">
               Ready to explore premium Tanzanian agricultural products? We're here to help.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-12 gap-8 md:gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-12 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Left Column - Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -927,56 +921,56 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-7"
             >
-              <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="flex items-center gap-4 mb-6">
+              <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="p-2 bg-green-600/10 rounded-2xl">
-                    <Mail className="w-5 h-5 text-green-600" />
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 tracking-tight">Send us a Message</h3>
-                    <p className="text-sm text-gray-600 font-light">We'll get back to you within 24 hours</p>
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 tracking-tight">Send us a Message</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 font-light">We'll get back to you within 24 hours</p>
                   </div>
                 </div>
 
-                <form className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-gray-700 tracking-tight">First Name</label>
+                <form className="space-y-3 sm:space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="space-y-1 sm:space-y-2">
+                      <label className="text-xs sm:text-sm font-medium text-gray-700 tracking-tight">First Name</label>
                       <Input 
                         placeholder="John" 
-                        className="h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
+                        className="h-9 sm:h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-gray-700 tracking-tight">Last Name</label>
+                    <div className="space-y-1 sm:space-y-2">
+                      <label className="text-xs sm:text-sm font-medium text-gray-700 tracking-tight">Last Name</label>
                       <Input 
                         placeholder="Doe" 
-                        className="h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
+                        className="h-9 sm:h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-700 tracking-tight">Email Address</label>
+                  <div className="space-y-1 sm:space-y-2">
+                    <label className="text-xs sm:text-sm font-medium text-gray-700 tracking-tight">Email Address</label>
                     <Input 
                       type="email" 
                       placeholder="john@company.com" 
-                      className="h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
+                      className="h-9 sm:h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-700 tracking-tight">Company</label>
+                  <div className="space-y-1 sm:space-y-2">
+                    <label className="text-xs sm:text-sm font-medium text-gray-700 tracking-tight">Company</label>
                     <Input 
                       placeholder="Your company name" 
-                      className="h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
+                      className="h-9 sm:h-10 bg-gray-50 border-gray-200 focus:border-green-600 focus:ring-green-600 rounded-2xl placeholder:text-gray-400 font-light"
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-700 tracking-tight">Inquiry Type</label>
+                  <div className="space-y-1 sm:space-y-2">
+                    <label className="text-xs sm:text-sm font-medium text-gray-700 tracking-tight">Inquiry Type</label>
                     <Select>
-                      <SelectTrigger className="h-10 bg-white border-gray-200 rounded-2xl text-gray-400 font-light">
+                      <SelectTrigger className="h-9 sm:h-10 bg-white border-gray-200 rounded-2xl text-gray-400 font-light">
                         <SelectValue placeholder="Select inquiry type" />
                       </SelectTrigger>
                       <SelectContent className="bg-white border border-gray-200 rounded-2xl font-light">
@@ -989,8 +983,8 @@ export default function HomePage() {
                     </Select>
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-700 tracking-tight">Message</label>
+                  <div className="space-y-1 sm:space-y-2">
+                    <label className="text-xs sm:text-sm font-medium text-gray-700 tracking-tight">Message</label>
                     <Textarea 
                       placeholder="Tell us about your requirements..." 
                       rows={4}
@@ -999,7 +993,7 @@ export default function HomePage() {
                   </div>
 
                   <Button 
-                    className="w-full h-11 bg-green-600 hover:bg-green-700 text-white text-base font-medium rounded-2xl transition-all duration-300 tracking-tight"
+                    className="w-full h-10 sm:h-11 bg-green-600 hover:bg-green-700 text-white text-sm sm:text-base font-medium rounded-2xl transition-all duration-300 tracking-tight"
                   >
                     Send Message
                   </Button>
@@ -1013,17 +1007,17 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-5 space-y-6"
+              className="lg:col-span-5 space-y-4 sm:space-y-6"
             >
               {/* Map */}
-              <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="flex items-center gap-4 mb-4">
+              <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                   <div className="p-2 bg-blue-100 rounded-2xl">
-                    <MapPin className="w-5 h-5 text-blue-600" />
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 tracking-tight">Visit Us</h3>
-                    <p className="text-sm text-gray-600 font-light">Dar es Salaam, Tanzania</p>
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 tracking-tight">Visit Us</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 font-light">Dar es Salaam, Tanzania</p>
                   </div>
                 </div>
                 <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl">
@@ -1041,62 +1035,62 @@ export default function HomePage() {
               </div>
 
               {/* Contact Details */}
-              <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="flex items-center gap-4 mb-6">
+              <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="p-2 bg-purple-100 rounded-2xl">
-                    <Phone className="w-5 h-5 text-purple-600" />
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 tracking-tight">Contact Details</h3>
-                    <p className="text-sm text-gray-600 font-light">Get in touch with our team</p>
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 tracking-tight">Contact Details</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 font-light">Get in touch with our team</p>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-center gap-3 sm:gap-4">
                     <div className="p-2 bg-gray-100 rounded-2xl">
-                      <Phone className="w-4 h-4 text-gray-600" />
+                      <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500 font-light">Phone</p>
-                      <p className="text-base font-medium text-gray-900 tracking-tight">+255 755 070 072</p>
+                      <p className="text-xs sm:text-sm text-gray-500 font-light">Phone</p>
+                      <p className="text-sm sm:text-base font-medium text-gray-900 tracking-tight">+255 755 070 072</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3 sm:gap-4">
                     <div className="p-2 bg-gray-100 rounded-2xl">
-                      <Mail className="w-4 h-4 text-gray-600" />
+                      <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500 font-light">Email</p>
-                      <p className="text-base font-medium text-gray-900 tracking-tight">info@orionafrica.com</p>
+                      <p className="text-xs sm:text-sm text-gray-500 font-light">Email</p>
+                      <p className="text-sm sm:text-base font-medium text-gray-900 tracking-tight">info@orionafrica.com</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3 sm:gap-4">
                     <div className="p-2 bg-gray-100 rounded-2xl">
-                      <Clock className="w-4 h-4 text-gray-600" />
+                      <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500 font-light">Business Hours</p>
-                      <p className="text-base font-medium text-gray-900 tracking-tight">Mon-Fri: 8AM - 6PM EAT</p>
-                      <p className="text-sm text-gray-500 font-light">Sat: 9AM - 2PM EAT</p>
+                      <p className="text-xs sm:text-sm text-gray-500 font-light">Business Hours</p>
+                      <p className="text-sm sm:text-base font-medium text-gray-900 tracking-tight">Mon-Fri: 8AM - 6PM EAT</p>
+                      <p className="text-xs sm:text-sm text-gray-500 font-light">Sat: 9AM - 2PM EAT</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                                      <div className="p-2 bg-green-600/10 rounded-2xl">
-                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                      </svg>
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="p-2 bg-green-600/10 rounded-2xl">
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500 font-light">WhatsApp</p>
+                      <p className="text-xs sm:text-sm text-gray-500 font-light">WhatsApp</p>
                       <a 
                         href="https://wa.me/255755070072" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-base font-medium text-gray-900 tracking-tight hover:text-green-600 transition-colors duration-300"
+                        className="text-sm sm:text-base font-medium text-gray-900 tracking-tight hover:text-green-600 transition-colors duration-300"
                       >
                         +255 755 070 072
                       </a>

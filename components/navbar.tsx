@@ -1,9 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Leaf } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { useState } from "react"
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -14,6 +16,9 @@ export default function Navbar() {
   ]
 
   const handleNavClick = (href: string) => {
+    // Close mobile menu
+    setIsOpen(false)
+    
     // Smooth scroll to section
     const element = document.querySelector(href)
     if (element) {
@@ -29,14 +34,14 @@ export default function Navbar() {
           <button onClick={() => handleNavClick("#home")} className="flex items-center space-x-2">
             <img 
               src="/africaunveil.png" 
-              alt="Neo Farms Logo" 
-              className="h-10 w-auto"
+              alt="Orion Africa Logo" 
+              className="h-8 w-auto sm:h-10"
             />
-            <span className="text-2xl font-bold text-gray-800">Orion Africa</span>
+            <span className="text-lg sm:text-2xl font-bold text-gray-800">Orion Africa</span>
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -54,21 +59,39 @@ export default function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Navigation - Always Visible */}
-          <div className="md:hidden flex items-center space-x-4">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavClick(item.href)}
-                className="text-gray-700 hover:text-green-600 font-medium transition-colors duration-200 text-sm"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-green-600 hover:bg-gray-100 transition-colors duration-200"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
 
-
+        {/* Mobile Navigation Menu */}
+        {isOpen && (
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.href)}
+                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md font-medium transition-colors duration-200"
+                >
+                  {item.name}
+                </button>
+              ))}
+              <div className="pt-2">
+                <Button
+                  className="w-full bg-green-600 hover:bg-green-700 text-white rounded-md"
+                  onClick={() => handleNavClick("#contact")}
+                >
+                  Get Quote
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   )
