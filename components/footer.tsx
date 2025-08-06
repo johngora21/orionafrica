@@ -45,7 +45,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:info@orionafrica.co.tz" className="hover:text-white transition-colors">info@orionafrica.com</a>
+                <a href="mailto:info@orionafrica.com" className="hover:text-white transition-colors">info@orionafrica.com</a>
               </li>
             </ul>
           </div>

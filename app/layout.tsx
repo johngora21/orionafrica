@@ -12,10 +12,58 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-          title: "Orion Africa - Premium Tanzanian Agricultural Exports",
-        description:
-          "Your trusted partner for high-quality agricultural exports from Tanzania. Serving governments and enterprises worldwide since 2021.",
-  generator: "v0.dev",
+  title: "Orion Africa - Premium Tanzanian Agricultural Exports",
+  description:
+    "Your trusted partner for high-quality agricultural exports from Tanzania. Serving governments and enterprises worldwide since 2021 with premium crops including coffee, cashews, avocados, and more.",
+  keywords: [
+    "Orion Africa",
+    "Tanzanian agricultural exports",
+    "premium crops",
+    "coffee exports",
+    "cashew nuts",
+    "avocados",
+    "agricultural products",
+    "Tanzania exports",
+    "global agriculture",
+    "sustainable farming"
+  ],
+  authors: [{ name: "Orion Africa" }],
+  creator: "Orion Africa",
+  publisher: "Orion Africa",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://orionafrica.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Orion Africa - Premium Tanzanian Agricultural Exports",
+    description: "Your trusted partner for high-quality agricultural exports from Tanzania. Serving governments and enterprises worldwide since 2021.",
+    url: "https://orionafrica.com",
+    siteName: "Orion Africa",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Orion Africa - Premium Tanzanian Agricultural Exports",
+    description: "Your trusted partner for high-quality agricultural exports from Tanzania.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  generator: "Next.js",
 }
 
 export default function RootLayout({
