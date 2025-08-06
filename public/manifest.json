@@ -1,0 +1,26 @@
+{
+  "name": "Orion Africa - Premium Tanzanian Agricultural Exports",
+  "short_name": "Orion Africa",
+  "description": "Your trusted partner for high-quality agricultural exports from Tanzania",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "icons": [
+    {
+      "src": "/orionlogo.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-large.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-large.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

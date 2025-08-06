@@ -1011,7 +1011,7 @@ export default function HomePage() {
             >
               {/* Map */}
               <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                   <div className="p-2 bg-blue-100 rounded-2xl">
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
                   </div>
@@ -1020,31 +1020,7 @@ export default function HomePage() {
                     <p className="text-xs sm:text-sm text-gray-600 font-light">Dar es Salaam, Tanzania</p>
                   </div>
                 </div>
-
-                <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <div className="p-2 bg-gray-100 rounded-2xl">
-                      <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
-                    </div>
-                    <div>
-                      <p className="text-xs sm:text-sm text-gray-500 font-light">Address</p>
-                      <p className="text-sm sm:text-base font-medium text-gray-900 tracking-tight">Dar es Salaam, Tanzania</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <div className="p-2 bg-gray-100 rounded-2xl">
-                      <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
-                    </div>
-                    <div>
-                      <p className="text-xs sm:text-sm text-gray-500 font-light">Office Hours</p>
-                      <p className="text-sm sm:text-base font-medium text-gray-900 tracking-tight">Mon-Fri: 8AM - 6PM EAT</p>
-                      <p className="text-xs sm:text-sm text-gray-500 font-light">Sat: 9AM - 2PM EAT</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl">
+                <div className="aspect-[3/2] w-full overflow-hidden rounded-2xl">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7526231084834!2d39.2084!3d-6.7924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b0c37c8c3c1%3A0x47e5d3971489240d!2sDar%20es%20Salaam%2C%20Tanzania!5e0!3m2!1sen!2sus!4v1647881234567!5m2!1sen!2sus"
                     width="100%"
