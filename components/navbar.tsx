@@ -33,7 +33,7 @@ export default function Navbar() {
           {/* Logo */}
           <button onClick={() => handleNavClick("#home")} className="flex items-center space-x-2">
             <img 
-              src="/africaunveil.png" 
+              src="/orionlogo.png" 
               alt="Orion Africa Logo" 
               className="h-8 w-auto sm:h-10"
             />
