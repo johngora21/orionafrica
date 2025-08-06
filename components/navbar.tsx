@@ -37,7 +37,7 @@ export default function Navbar() {
               alt="Orion Africa Logo" 
               className="h-8 w-auto sm:h-10"
             />
-            <span className="text-lg sm:text-2xl font-bold text-gray-800">Orion Africa</span>
+            <span className="text-lg sm:text-2xl font-bold text-gray-700">Orion Africa</span>
           </button>
 
           {/* Desktop Navigation */}
