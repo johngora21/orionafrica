@@ -75,9 +75,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/orionlogo.png" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/favicon-large.png" type="image/png" sizes="192x192" />
-        <link rel="apple-touch-icon" href="/favicon-large.png" sizes="180x180" />
+        <link rel="icon" href="/orionlogo.png" type="image/png" sizes="64x64" />
+        <link rel="icon" href="/favicon-large.png" type="image/png" sizes="256x256" />
+        <link rel="icon" href="/favicon-extra-large.png" type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/favicon-extra-large.png" sizes="180x180" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${poppins.variable} font-sans antialiased`}>

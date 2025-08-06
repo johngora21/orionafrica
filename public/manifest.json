@@ -9,17 +9,22 @@
   "icons": [
     {
       "src": "/orionlogo.png",
-      "sizes": "32x32",
+      "sizes": "64x64",
       "type": "image/png"
     },
     {
       "src": "/favicon-large.png",
-      "sizes": "192x192",
+      "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/favicon-large.png",
+      "src": "/favicon-extra-large.png",
       "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-extra-large.png",
+      "sizes": "1024x1024",
       "type": "image/png"
     }
   ]
